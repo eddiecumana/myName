@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello!</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+    <div class="wrapper">
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Hello_my_name_is_sticker.svg">
+        {% for message in get_flashed_messages() %}
+        {{ message }}
+        {% endfor %}
+        <p>Please enter your name below:</p>
+        <form action="hello" method="post">
+            <input type="text" name="hello_input" id="input_text"><br>
+            <input type="submit" value="SUBMIT" id="hello">
+        </form>
+
+    </div>
+    </body>
+</html>
