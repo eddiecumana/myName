@@ -24,3 +24,6 @@ six==1.16.0
 soupsieve==2.3.2
 urllib3==1.26.9
 Werkzeug==2.1.1
+
+# Python Framework
+Flask 2.1.1
